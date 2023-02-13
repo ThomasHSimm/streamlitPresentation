@@ -1,0 +1,238 @@
+{
+    "general": {
+        "reg_col_names": {
+            "(per cent)": "%",
+            "(\\(level\\))": "(thousands)",
+            "(level)": "",
+            "(level in)": "",
+            "(number of people)": "",
+            "(rate or proportion)": "%",
+            "(years)": "years",
+            "Main and Second Jobs": "Total workers with second jobs"
+        },
+        "final_col_changes": {
+            "(  )": " ",
+            "(\\( )": "(",
+            "( \\.)": "."
+        },
+        "reg_mapper_change": {
+            "AGE": [
+                [
+                    "(^[\\s\\S]*)",
+                    "aged \\1"
+                ]
+            ],
+            "JOB": [
+                [
+                    "(Total)",
+                    "All in employment"
+                ]
+            ],
+            "INECAC": [
+                [
+                    "(^[A-Za-z])",
+                    ". \\1"
+                ],
+                [
+                    "(Employment)",
+                    "Total"
+                ],
+                [
+                    "([A-Za-z]$)",
+                    "\\1 working "
+                ]
+            ],
+            "YNONPERMJOB": [
+                [
+                    "^Temporary$",
+                    "Total of temporary employees"
+                ],
+                [
+                    "Temporary -",
+                    "Temporary employees"
+                ],
+                [
+                    "^Casual$",
+                    "Total of Causal employees"
+                ],
+                [
+                    "Casual -",
+                    "Casual employees"
+                ],
+                [
+                    "^Part Time$",
+                    "Total of part time workers"
+                ],
+                [
+                    "Part Time -",
+                    "Part time workers"
+                ]
+            ]
+        }
+    },
+    "A02": {
+        "EXPECTED_FILES_DICTIONARY": 1,
+        "list_order": [
+            "SEX",
+            "INECAC",
+            "AGE",
+            "TYPE"
+        ],
+        "split_mappers": [
+            "SEX"
+        ],
+        "divide_col_dict": {
+            "(\\(level\\))": 1000
+        },
+        "reg_col_names": {
+            " ": " "
+        },
+        "reg_mapper_change": {
+            "SEX":[[
+                " ", " "
+            ]],
+            "AGE": [
+                [
+                    "(^[\\s\\S]*)",
+                    "age \\1"
+                ]
+            ]
+                }
+    },
+    "HOUR01": {
+        "EXPECTED_FILES_DICTIONARY": 1,
+        "list_order": [
+            "SEX",
+            "TYPE",
+            "JOB",
+            "PTFT"
+        ],
+        "split_mappers": [
+            "SEX"
+        ],
+        "divide_col_dict": {
+            "(\\(millions\\))": 1000000
+        },
+        "reg_col_names": {
+            "hours actual total": "total weekly hours",
+            "hours actual average": "average actual weekly hours of work",
+            "main job full time": "full-time workers",
+            "main job part time": "part-time workers",
+            "second job total population": "second job",
+            "main and second jobs": "all workers",
+            "Total population": "Part and full time"
+        },
+        "reg_mapper_change": {
+            "PTFT": [
+                [
+                    "(^[A-Za-z])",
+                    ". \\1"
+                ]
+            ]
+        }
+    },
+    "A05": {
+        "EXPECTED_FILES_DICTIONARY": 1,
+        "list_order": [
+            "SEX",
+            "INECAC",
+            "AGE",
+            "TYPE"
+        ],
+        "split_mappers": [
+            "SEX"
+        ],
+        "divide_col_dict": {
+            "(\\(level\\))": 1000
+        },
+        "reg_col_names": {},
+        "reg_mapper_change": {}
+    },
+    "EMP01": {
+        "EXPECTED_FILES_DICTIONARY": 5,
+        "list_order": [
+            "SEX",
+            "JOB",
+            "INECAC",
+            "PTFT",
+            "YNONPERMJOB",
+            "TYPE"
+        ],
+        "split_mappers": [
+            "SEX"
+        ],
+        "divide_col_dict": {
+            "(\\(level\\))": 1000
+        },
+        "reg_col_names": {
+            "total population": "part and full time",
+            "Main and Second Jobs": "Total workers with second jobs"
+        },
+        "reg_mapper_change": {
+            "JOB": [
+                [
+                    "(Total)",
+                    "All in employment"
+                ]
+            ],
+            "INECAC": [
+                [
+                    "(^[A-Za-z])",
+                    ". \\1"
+                ],
+                [
+                    "(Employment)",
+                    "Total"
+                ],
+                [
+                    "([A-Za-z]$)",
+                    "\\1 working "
+                ]
+            ],
+            "YNONPERMJOB": [
+                [
+                    "^Temporary$",
+                    "Total of temporary employees"
+                ],
+                [
+                    "Temporary -",
+                    "Temporary employees"
+                ],
+                [
+                    "^Casual$",
+                    "Total of Causal employees"
+                ],
+                [
+                    "Casual -",
+                    "Casual employees"
+                ],
+                [
+                    "^Part Time$",
+                    "Total of part time workers"
+                ],
+                [
+                    "Part Time -",
+                    "Part time workers"
+                ]
+            ]
+        }
+    },
+    "REGHX01": {
+        "EXPECTED_FILES_DICTIONARY": 1,
+        "list_order": [
+            "SEX",
+            "REGION",
+            "INECAC",
+            "AGE",
+            "TYPE"
+        ],
+        "split_mappers": [
+            "SEX"
+        ],
+        "divide_col_dict": {
+            "(\\(level\\))": 1000
+        },
+        "reg_col_names": {},
+        "reg_mapper_change": {}
+    }
+}
