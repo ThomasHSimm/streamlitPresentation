@@ -1,0 +1,8 @@
+[project]
+name = "streamlit_gui"
+version = "0.1"
+description = "Streamlit GUI"
+entry_point = "test/main_test.py"
+requirements_file = "test/requirements.txt"
+icon_path = "favicon.ico"
+build_dir = "build_windows"

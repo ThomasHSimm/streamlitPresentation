@@ -1,0 +1,5 @@
+streamlit>=1.25.0
+base64
+PIL
+pandas>=2.0.3
+cx_Freeze>=6.14.9
