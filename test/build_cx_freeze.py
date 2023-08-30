@@ -82,10 +82,11 @@ def main():
     # Build the path to the Scripts directory and streamlit.exe
     scripts_dir = os.path.join(python_env_dir, "Scripts")
     streamlit_exe_path = os.path.join(scripts_dir, "streamlit.exe")
+    python_exe_path = os.path.join(python_env_dir, "python.exe")
 
     include_files = [
         (streamlit_exe_path, "streamlit.exe"),
-        (python_env_dir, "python.exe"),
+        (python_exe_path, "python.exe"),
         ("test/main_test.py", "main_test.py"),
         ("test/streamlit.py", "streamlit.py"),
     ]

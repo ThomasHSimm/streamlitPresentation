@@ -9,6 +9,11 @@ def main():
             os.getcwd(), "streamlit.exe"
         )
     
+    python_path =  os.path.join(
+            os.getcwd(), "python.exe"
+        )
+    sys.executable = python_path
+    
     subprocess.Popen([streamlit_script_path, "run", streamlit_app_path])
     
 
