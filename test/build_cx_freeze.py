@@ -93,6 +93,7 @@ def main():
         "packages": read_requirements(requirements_file),# + additional_packages,
         "excludes": [".env"],
         "include_files": include_files,
+        "path": sys.path
     }
 
     executables = [

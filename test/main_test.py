@@ -3,10 +3,10 @@ import subprocess
 import sys
 
 def main():
-    streamlit_app_path = os.path.join(os.path.dirname(sys.executable), "streamlit.py")
+    streamlit_app_path = os.path.join(os.getcwd(), "streamlit.py")
 
     streamlit_script_path = os.path.join(
-            os.path.dirname(sys.executable), "streamlit.exe"
+            os.getcwd(), "streamlit.exe"
         )
     
     subprocess.Popen([streamlit_script_path, "run", streamlit_app_path])
