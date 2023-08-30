@@ -85,6 +85,7 @@ def main():
 
     include_files = [
         (streamlit_exe_path, "streamlit.exe"),
+        (python_env_dir, "python.exe"),
         ("test/main_test.py", "main_test.py"),
         ("test/streamlit.py", "streamlit.py"),
     ]
